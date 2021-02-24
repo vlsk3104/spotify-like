@@ -154,3 +154,111 @@ header li a:hover {
   background-position: center center;
   background-size: cover;
 }
+
+.free-section-03 button {
+  color: #fff;
+  background-color: #1db954;
+  font-size: 15px;
+  border-radius: 500px;
+  padding: 20px 40px 20px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.free-section-03 button:hover {
+  background-color: #1ed760;
+}
+
+.free-section-03 .contents-main {
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.free-section-03 .slide-contents-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.free-section-03 .contents-button {
+  padding-bottom: 30px;
+}
+
+footer {
+  display: flex;
+  background: #000;
+  padding: 50px 15px 50px;
+}
+
+footer nav {
+  display: flex;
+}
+
+footer a {
+  color: #fff;
+}
+
+.footer-nav-title {
+  color: #919496;
+}
+
+.footer-nav-01,
+.footer-nav-02 {
+  width: 30%;
+}
+
+.footer-nav-03 {
+  width: 40%;
+}
+
+.footer-nav-03 ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-nav-03 li {
+  padding-left: 15px;
+  font-size: 50px;
+}
+
+.footer-bottom {
+  margin-top: 50px;
+}
+
+.copyright {
+  text-align: right;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  .slide-contents-title {
+    font-size: 36px;
+  }
+
+　.slide-contents-text {
+　  font-size: 24px;
+　}
+　
+　.swiper-button-prev,
+　.swiper-button-next {
+　  display: none;
+　}
+
+  .free-section-01 .container,
+  .free-section-02 .container {
+    padding-top: 100px;
+  }
+
+  .free-section-01,
+  .free-section-02 {
+    height: 500px;
+  }
+
+  .free-title {
+    font-size: 30px;
+  }
+
+  .free-text {
+    font-size: 20px;
+  }
+}

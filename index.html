@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サイト名</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>music</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="stylesheet" href="swiper/swiper.min.css">
+    <script src="swiper/swiper.min.js"></script>
+    
+    <!-- swiper cdn link
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    -->
+  </head>
 
-<body>
-  <img src="images/image.jpg">
-  <a href="https://www.yahoo.co.jp/">
-    <h3>リンク</h3>
-  </a>
-  <div class="test">
-    <h2> タイトル</h2>
-  </div>
+  <body>
 
-  <br>
-  <br>
-  <br>
+    <header>
+      <div class="container">
+        <div class="header-main">
+          <div class="logo">
+            <div class="logo-main"><img src="images/logo.svg"/></div>
+          </div> <!-- logo -->
+          <nav>
+            <ul>
+              <li><a href="">登録する</a></li>
+              <li><a href="">ログイン</a></li>
+            </ul>
+          </nav>
+        </div> <!-- header-main -->
+      </div>
+    </header>
+    
+    <section class="swiper">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
 
-  <div id="test1" class="parent">
-    <div class="children">要素</div>
-  </div>
+          <div class="swiper-slide slide01">
+            <div class="slide-contents">
+              <div class="slide-contents-title">
+                あなただけの1曲を。<br>
+              </div>
+              <div class="slide-contents-text">
+                世界中の楽曲をチェック。<br>
+                あの音楽が見つかる。<br>
+              </div>
+            </div> <!-- slide-contents -->
+          </div> <!-- swiper-slide -->
 
-  <br>
-  <br>
+          <div class="swiper-slide slide02">
+            <div class="slide-contents">
+              <div class="slide-contents-title">
+                音楽を共有しよう。<br>
+              </div>
+              <div class="slide-contents-text">
+                気に入った楽曲をSNSで簡単にシェアできます。<br>
+                シェアを通して新しい音楽と出会おう。<br>
+              </div>
+            </div> <!-- slide-contents -->
+          </div> <!-- swiper-slide -->
+        </div> <!-- swiper-wrapper -->
 
-  <div id="test2" class="parent">
-    <div class="children">要素</div>
-  </div>
+        <div class="swiper-button">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div> <!-- swiper-button -->
 
-  <br>
-  <br>
+        <div class="swiper-pagination"></div>
+      </div> <!-- swiper-container -->
+    </section> <!-- swiper -->
 
-  <div id="test3" class="parent">
-    <div class="children">要素</div>
-  </div>
+    <!-- ここから追加 -->
+    <script type="text/javascript">
+    var swiper = new Swiper('.swiper-container',{
+      speed: 1000, // スピード設定 1000=1秒
+      autoplay: true, // 自動切り替え trueで有効 falseで無
+      loop: true, // ループ trueで有効 falseで無効
+      navigation: {
+        nextEl: '.swiper-button-next', // 次のボタンを表示する要素指定
+        prevEl: '.swiper-button-prev' // 前のボタンを表示する要素指定
+      },
+      pagination: {
+        el: '.swiper-pagination', // ページネーションを表示する要素指定
+      }
+      // ここまで追加
+      
+    });
+    </script>
 
-</body>
+  </body>
 </html>
-
-<style>
-  h2 {
-    color: blue;
-    width: 100%;
-    padding: 30px;
-    margin: 30px;
-    background-color: #ffee00;
-  }
-  body {
-    background-color: #f2f2f2;
-  }
-  .test {
-    display: flex;
-    background-color: #ff0021;
-  }
-  .parent {
-    padding: 10px;
-    background-color: #9eefff;
-    display: flex;
-  }
-  #test1 {
-    justify-content: flex-start;
-  }
-  #test2 {
-    justify-content: flex-end;
-  }
-  #test3 {
-    justify-content: center;
-  }
-
-</style>
